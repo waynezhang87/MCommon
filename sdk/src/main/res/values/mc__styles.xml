@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Window.DialogAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/mc__fade_in</item>
+        <item name="android:windowExitAnimation">@anim/mc__fade_out</item>
+    </style>
+
+    <style name="mc_anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/mc_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/mc_slide_out</item>
+    </style>
+
+    <style name="title_selector_list" parent="mcTitleBarExtStyleLight.TopTitle1">
+        <item name="mc_title_action_menu_resourceId">@null</item>
+    </style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <style name="mc_anim_preview_top">
+        <item name="android:windowEnterAnimation">@anim/ptr_slide_in_from_top</item>
+        <item name="android:windowExitAnimation">@anim/ptr_slide_out_to_top</item>
+    </style>
+
+    <style name="mc_anim_preview_bottom">
+        <item name="android:windowEnterAnimation">@anim/ptr_slide_in_from_bottom</item>
+        <item name="android:windowExitAnimation">@anim/ptr_slide_out_to_bottom</item>
+    </style>
+
+    <style name="defaultMcTitleBarStyle">
+        <item name="mcLeftButtonImage">@drawable/mc_icon_top_back</item>
+        <item name="mcLayoutResourceId">R.layout.mc_title_bar</item>
+        <!--item name="mcRightViewBackground">@drawable/mc_solid_red_coner_white</item -->
+    </style>
+
+    <style name="mcTitleBarExtStyleLight">
+        <item name="android:background">@color/mc_white</item>
+        <item name="mc_title_text">大标题</item>
+        <item name="mc_title_more_drawable">@drawable/mc_icon_top_more</item>
+    </style>
+
+    <style name="mcTitleBarExtStyleDark">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="mc_title_more_drawable">@drawable/mc_icon60_top_more</item>
+    </style>
+
+    <style name="mcTitleBarExtStyleLight.Top">
+        <item name="mc_title_action_menu_resourceId">@menu/mc_titlebarext_action_menu_top</item>
+    </style>
+
+    <style name="mcTitleBarExtStyleLight.TopTitle1">
+        <item name="mc_title_left_drawable">@drawable/mc_icon_top_back</item>
+        <item name="mc_title_action_menu_resourceId">@menu/mc_titlebarext_action_menu_top_title1</item>
+    </style>
+
+    <style name="mcTitleBarExtStyleLight.TopTitle2">
+        <item name="mc_title_sub_text">小标题</item>
+        <item name="mc_title_left_drawable">@drawable/mc_icon_top_back</item>
+        <item name="mc_title_action_menu_resourceId">@menu/mc_titlebarext_action_menu_top_title2</item>
+    </style>
+
+    <style name="mcTitleBarExtStyleLight.TopBtn">
+        <item name="mc_title_left_drawable">@drawable/mc_icon_top_back</item>
+        <item name="mc_title_action_menu_resourceId">@menu/mc_titlebarext_action_menu_top_btn</item>
+    </style>
+
+    <style name="mcTitleBarExtStyleDark.TopBlack">
+        <item name="mc_title_left_drawable">@drawable/mc_icon60_top_back</item>
+        <item name="mc_title_action_menu_resourceId">@menu/mc_titlebarext_action_menu_top_black</item>
+    </style>
+
+</resources>

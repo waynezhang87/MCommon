@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.waynezhang.mcommon.xwidget.McTitleBar
+        android:id="@+id/mc_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:mcLeftButtonImage="@drawable/mc_icon_top_back"
+        android:layout_alignParentTop="true"/>
+
+    <!--RelativeLayout
+        android:id="@+id/titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/mc_tile_bg" >
+        <ImageView
+            android:id="@+id/mc_btnLeft"
+            android:layout_width="53.33dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:padding="0dip"
+            android:scaleType="center"
+            android:src="@drawable/mc_icon_top_back" />
+
+        <ImageView
+            android:id="@+id/mc_vline"
+            android:layout_width="2px"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/mc_btnLeft"
+            android:layout_marginBottom="11.5dp"
+            android:layout_marginTop="11.5dp"
+            android:background="@color/mc_tile_line_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/mc_vline"
+            android:layout_marginLeft="12dp"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="聊天图片"
+            android:textColor="@color/mc_txt12_black30_2"
+            android:textSize="@dimen/mc_txt13TextSize" />
+    </RelativeLayout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mc_titleBar"
+        android:background="@color/mc_page_viewer_bg">
+
+        <FrameLayout
+            android:id="@+id/all_pics_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridView
+                android:id="@+id/all_pics_list"
+                android:paddingLeft="3.0dip"
+                android:paddingRight="3.0dip"
+                android:paddingTop="3.0dip"
+                android:verticalSpacing="3.0dip"
+                android:horizontalSpacing="3dip"
+                android:numColumns="4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@drawable/mc_mm_trans"
+                android:layout_weight="1.0"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                >
+            </GridView>
+            <TextView
+                android:id="@+id/datetime_bar_txt"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:text="本周"
+                android:paddingLeft="12dp"
+                android:textSize="@dimen/mc_txt14TextSize"
+                android:gravity="left|center"
+                android:textColor="@color/mc_txt14_white24"
+                android:background="@color/mc_black_transparent_50"
+                android:visibility="invisible"
+                />
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

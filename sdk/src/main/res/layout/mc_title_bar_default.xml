@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    tools:background="@color/mc_tile_bg">
+
+    <TextView
+        android:id="@+id/mc_btnLeft"
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:paddingLeft="13dp"
+        android:paddingRight="15dp"
+        android:gravity="center"
+        android:scaleType="center"
+        android:textColor="#ffffff"
+        android:textSize="15dp"
+        android:drawableLeft="@drawable/mc_icon_top_back"/>
+
+    <ImageView
+        android:id="@+id/mc_vline"
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/mc_btnLeft"
+        android:layout_marginBottom="11.5dp"
+        android:layout_marginTop="11.5dp"
+        android:background="@color/mc_tile_line_bg"/>
+
+    <TextView
+        android:id="@+id/mc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/mc_vline"
+        android:layout_marginLeft="12dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="图片"
+        android:textColor="@color/mc_txt12_black30_2"
+        android:textSize="@dimen/mc_txt13TextSize" />
+
+    <ImageView
+        android:id="@+id/mc_title_icon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_toRightOf="@+id/mc_title"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="11.5dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/mc_btnRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dip"
+        android:layout_marginLeft="10dip"
+        android:gravity="center"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:text="完成(0/10)"
+        android:textColor="@color/mc_txt12_black30_2"
+        android:textSize="@dimen/mc_txt18TextSize" />
+
+    <ImageView
+        android:id="@+id/mc_vlineright"
+        android:layout_width="2px"
+        android:layout_height="match_parent"
+        android:layout_toLeftOf="@id/mc_btnRight"
+        android:layout_marginBottom="11.5dp"
+        android:layout_marginTop="11.5dp"
+        android:background="@color/mc_tile_line_bg"/>
+</RelativeLayout>

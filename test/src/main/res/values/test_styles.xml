@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="vpiIconPageIndicatorStyle">@style/Widget.IconPageIndicator</item>
+        <item name="vpiTabPageIndicatorStyle">@style/Widget.TabPageIndicator</item>
+        <item name="vpiCirclePageIndicatorStyle">@style/Widget</item>
+
+        <item name="popupMenuStyle">@style/PopupMenu.Mhh</item>
+        <!--<item name="dropDownListViewStyle">@style/DropDownList.Mhh</item>-->
+
+        <item name="textAppearanceLargePopupMenu">@style/textAppearanceLargePopupMenu.Mhh</item>
+        <item name="textAppearanceSmallPopupMenu">@style/textAppearanceSmallPopupMenu.Mhh</item>
+
+        <!--<item name="mcTitleBarStyle">@style/Widget.McTheme.McTitleBar</item>-->
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+    </style>
+
+    <!--<style name="AppThemeWitSplash" parent="AppTheme">-->
+        <!--<item name="android:windowBackground">@drawable/splash</item>-->
+    <!--</style>-->
+
+    <!--<style name="DropDownList.Mhh" parent="@style/Widget.AppCompat.ListView.DropDown">-->
+        <!--<item name="android:divider">@color/menu_divider</item>-->
+        <!--<item name="android:dividerHeight">1px</item>-->
+    <!--</style>-->
+
+    <style name="PopupMenu.Mhh" parent="@style/Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@drawable/test_menu_bg</item>
+    </style>
+
+    <style name="textAppearanceLargePopupMenu.Mhh" parent="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small">
+        <item name="android:textColor">#D6D6D6</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+
+    <style name="textAppearanceSmallPopupMenu.Mhh" parent="@style/TextAppearance.AppCompat.Widget.PopupMenu.Small">
+        <item name="android:textColor">#D6D6D6</item>
+        <item name="android:textSize">16dp</item>
+    </style>
+</resources>

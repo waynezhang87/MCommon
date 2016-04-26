@@ -1,0 +1,20 @@
+{
+    "policies": [
+        {
+            "key": "/api/accountapi/config.*&method=GetGameOperatorAreaGroupList",
+            "policyType": 3,
+            "useCacheTimeout": 20,
+            "cacheExpireTime": 86400,
+            "params": {
+                "include": [
+                    "type"
+                ]
+            }
+        }
+    ],
+    "defaultPolicy": {
+        "key": "*",
+        "policyType": 0,
+        "useCacheTimeout": 10
+    }
+}

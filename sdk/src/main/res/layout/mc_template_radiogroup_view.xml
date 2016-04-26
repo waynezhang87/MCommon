@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/mc_white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/title"
+            android:textSize="15dp"
+            android:textColor="@color/mc_black"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="操作系统" />
+        <TextView
+            android:id="@+id/profession_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="|"
+            android:textColor="#c7c7c7" />
+
+        <com.waynezhang.mcommon.xwidget.LoadingLayout
+            android:id="@+id/viewLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <RadioGroup
+                android:id="@+id/osGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal">
+
+            </RadioGroup>
+        </com.waynezhang.mcommon.xwidget.LoadingLayout>
+
+        <TextView
+            android:id="@+id/android_system"
+            android:textSize="15dp"
+            android:textColor="@color/mc_red"
+            android:layout_width="99dp"
+            android:background="@drawable/mc_btn_red_solid_white_stroke"
+            android:layout_height="31dp"
+            android:gravity="center"
+            android:layout_marginLeft="15dp"
+            android:text="Android"
+            />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#dddddd"/>
+
+
+
+</LinearLayout>

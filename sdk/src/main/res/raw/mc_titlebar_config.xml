@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config_list> <!--icon表示不在下拉框时显示的图标, name表示下拉框显示的文字, thumbnail表示下拉框显示的图标-->
+     <item id="#01" name="添加" icon="icon_top_add" thumbnail="icon_top_add"/>
+     <item id="#02" name="查询" icon="icon_top_search" thumbnail="icon_top_search"/>
+     <item id="#03" name="收藏" icon="icon_top_fav" thumbnail="icon_top_fav"/>
+     <item id="#04" name="买单" icon="icon_top_buy" thumbnail="icon_top_buy"/>
+     <item id="#05" name="卖单" icon="icon_top_sell" thumbnail="icon_top_sell"/>
+     <item id="#06" name="商品管理" icon="icon_top_manage" thumbnail="icon_top_manage"/>
+     <item id="#07" name="消息" icon="icon_top_message" thumbnail="icon_top_message"/>
+</config_list>

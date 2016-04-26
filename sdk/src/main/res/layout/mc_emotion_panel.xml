@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/chatting_emotion_panel"
+    android:background="@color/emotion_panel_bg"
+    android:orientation="vertical"
+    android:visibility="visible">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/figure_pager"
+            android:layout_width="match_parent"
+            android:layout_height="188.0dip"
+            android:fadingEdge="none"
+            android:spacing="1.0dip"
+            android:unselectedAlpha="1.0" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0" />
+
+    <LinearLayout
+        android:id="@+id/gallery_point_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/figure_pager"
+        android:layout_marginBottom="10.0dip"
+        android:gravity="center"
+        android:orientation="horizontal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/emotion_panel_divider" />
+
+    <LinearLayout
+        android:id="@+id/emotion_tab_group"
+        android:layout_width="match_parent"
+        android:layout_height="37.0dip"
+        android:background="@color/emotion_panel_bg"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</LinearLayout>

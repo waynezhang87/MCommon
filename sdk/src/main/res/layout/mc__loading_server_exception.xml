@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="25dip"
+        android:paddingRight="25dip" >
+
+        <ImageView
+            android:layout_width="50dip"
+            android:layout_height="40dip"
+            android:src="@drawable/mc__no_network" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="请求服务器失败,请稍后再试试吧"
+            android:textSize="12dp"
+            android:textColor="#666666" />
+
+        <TextView
+            android:id="@android:id/button1"
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:layout_width="145dip"
+            android:layout_height="45dip"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/mc__loading_btn_selector"
+            android:gravity="center"
+            android:text="重试" />
+    </LinearLayout>
+
+</FrameLayout>

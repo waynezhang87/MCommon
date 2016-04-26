@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/message"
+        android:icon="@drawable/icon60_top_news"
+        app:mc_title_action_menu_item_icon_large="@drawable/icon60_top_news"
+        android:title="消息"/>
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/icon_fav_grey"
+        app:mc_title_action_menu_item_icon_large="@drawable/icon_fav_grey"
+        android:title="收藏"/>
+    <item
+        android:id="@+id/buy_order"
+        android:icon="@drawable/icon_buy_grey"
+        app:mc_title_action_menu_item_icon_large="@drawable/icon_buy_grey"
+        android:title="买单" />
+    <item
+        android:id="@+id/sell_order"
+        android:icon="@drawable/icon_sell_grey"
+        app:mc_title_action_menu_item_icon_large="@drawable/icon_sell_grey"
+        android:title="卖单" />
+    <item
+        android:id="@+id/manage"
+        android:icon="@drawable/icon_manage_grey"
+        app:mc_title_action_menu_item_icon_large="@drawable/icon_manage_grey"
+        android:title="商品管理" />
+</menu>

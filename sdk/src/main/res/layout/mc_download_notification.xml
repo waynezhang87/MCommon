@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/mc_image"
+        android:layout_width="64dp"
+        android:layout_height="64dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mc_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="xxxx.apk"
+                    android:textColor="#dadada"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/mc_tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:minWidth="60dp"
+                    android:text="进度（0%）"
+                    android:textColor="#909090"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/mc_iv_pause"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00ffffff"
+                    android:src="@drawable/mc_btn_pause_selector" />
+
+                <ImageButton
+                    android:id="@+id/mc_iv_continue"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="#00ffffff"
+                    android:src="@drawable/mc_btn_play_selector" />
+
+                <ImageButton
+                    android:id="@+id/mc_iv_cancel"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="6dp"
+                    android:background="#00ffffff"
+                    android:src="@drawable/mc_btn_stop_selector" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ProgressBar
+            android:id="@+id/mc_progressbar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="3dp"
+            android:max="100"
+            android:progress="0" />
+    </LinearLayout>
+
+</LinearLayout>

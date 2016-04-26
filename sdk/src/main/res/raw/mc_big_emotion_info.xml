@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<emotion_list total_page="3" row_size="3" page_txt=" 小方人 " type="3" column_size="5" item_width="38" item_height="38" page_icon="mc_emotion_xiaofangren_btn"><!--type:1为png静态小表情 2为gif动态表情 3为png静态大表情-->
+     <emotion id="#b01" name="[表情1]" icon="em_xfr_l_001" type="3"/><!--type:1为小表情项目  2为删除按钮 3为大表情项目-->
+     <emotion id="#b02" name="[表情2]" icon="em_xfr_l_002" type="3"/>
+     <emotion id="#b03" name="[表情3]" icon="em_xfr_l_003" type="3"/>
+     <emotion id="#b04" name="[表情4]" icon="em_xfr_l_004" type="3"/>
+     <emotion id="#b05" name="[表情5]" icon="em_xfr_l_005" type="3"/>
+     <emotion id="#b06" name="[表情6]" icon="em_xfr_l_006" type="3"/>
+     <emotion id="#b07" name="[表情7]" icon="em_xfr_l_007" type="3"/>
+     <emotion id="#b08" name="[表情8]" icon="em_xfr_l_008" type="3"/>
+     <emotion id="#b09" name="[表情9]" icon="em_xfr_l_009" type="3"/>
+     <emotion id="#b10" name="[表情10]" icon="em_xfr_l_010" type="3"/>
+     <emotion id="#b15" name="[表情15]" icon="em_xfr_l_015" type="3"/>
+     <emotion id="#b16" name="[表情16]" icon="em_xfr_l_016" type="3"/>
+     <emotion id="#b17" name="[表情17]" icon="em_xfr_l_017" type="3"/>
+     <emotion id="#b18" name="[表情18]" icon="em_xfr_l_018" type="3"/>
+     <emotion id="#b19" name="[表情19]" icon="em_xfr_l_019" type="3"/>
+     <emotion id="#b20" name="[表情20]" icon="em_xfr_l_020" type="3"/>
+     <emotion id="#b21" name="[表情21]" icon="em_xfr_l_021" type="3"/>
+     <emotion id="#b22" name="[表情22]" icon="em_xfr_l_022" type="3"/>
+     <emotion id="#b23" name="[表情23]" icon="em_xfr_l_023" type="3"/>
+     <emotion id="#b24" name="[表情24]" icon="em_xfr_l_024" type="3"/>
+     <emotion id="#b29" name="[表情29]" icon="em_xfr_l_029" type="3"/>
+     <emotion id="#b30" name="[表情30]" icon="em_xfr_l_030" type="3"/>
+     <emotion id="#b31" name="[表情31]" icon="em_xfr_l_031" type="3"/>
+     <emotion id="#b32" name="[表情32]" icon="em_xfr_l_032" type="3"/>
+     <emotion id="#b33" name="[表情33]" icon="em_xfr_l_033" type="3"/>
+     <emotion id="#b34" name="[表情34]" icon="em_xfr_l_034" type="3"/>
+     <emotion id="#b35" name="[表情35]" icon="em_xfr_l_035" type="3"/>
+     <emotion id="#b36" name="[表情36]" icon="em_xfr_l_036" type="3"/>
+     <emotion id="#b37" name="[表情37]" icon="em_xfr_l_037" type="3"/>
+     <emotion id="#b38" name="[表情38]" icon="em_xfr_l_038" type="3"/>
+     <emotion id="#b41" name="[表情41]" icon="em_xfr_l_041" type="3"/>
+     <emotion id="#b42" name="[表情42]" icon="em_xfr_l_042" type="3"/>
+     <emotion id="#b43" name="[表情43]" icon="em_xfr_l_043" type="3"/>
+   
+</emotion_list>

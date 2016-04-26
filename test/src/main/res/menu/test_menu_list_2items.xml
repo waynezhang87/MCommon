@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/add"
+        android:icon="@drawable/icon_top_add"
+        app:mc_title_action_menu_item_icon_large="@drawable/icon_top_add"
+        android:title="添加"/>
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/icon_fav_grey"
+        app:mc_title_action_menu_item_icon_large="@drawable/icon_fav_grey"
+        android:title="收藏"/>
+</menu>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="McTheme">
+        <!-- Style of the McTitleBar. -->
+        <attr name="mcTitleBarStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="LoadingLayout">
+        <attr name="loadingView" format="reference"/>
+        <attr name="noNetworkView" format="reference"/>
+        <attr name="timeoutView" format="reference"/>
+        <attr name="networkExceptionView" format="reference"/>
+        <attr name="serverExceptionView" format="reference"/>
+        <attr name="defaultExceptionView" format="reference"/>
+        <attr name="noDataView" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedImageView">
+        <attr name="riv_corner_radius" format="dimension"/>
+        <attr name="riv_border_width" format="dimension"/>
+        <attr name="riv_border_color" format="color"/>
+        <attr name="riv_mutate_background" format="boolean"/>
+        <attr name="riv_oval" format="boolean"/>
+        <attr name="android:scaleType"/>
+        <attr name="riv_tile_mode">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="riv_tile_mode_x">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+        <attr name="riv_tile_mode_y">
+            <enum name="clamp" value="0"/>
+            <enum name="repeat" value="1"/>
+            <enum name="mirror" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="EmotionPanelView">
+        <attr name="localEmotionContainer" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="McTitleBar">
+        <attr name="android:background"/>
+        <attr name="android:textColor"/>
+        <attr name="mcTitleTextColor" format="color"/>
+        <attr name="mcRightViewBackground" format="reference"/>
+        <attr name="mcLeftButtonImage" format="reference" />
+        <attr name="mcLeftButtonText" format="string" />
+        <attr name="mcTitleText" format="string" />
+        <attr name="mcRightButtonText" format="string" />
+        <attr name="mcLayoutResourceId" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="McTitleBarExt">
+        <attr name="android:background"/>
+        <attr name="mc_title_text" format="string" />
+        <!--<attr name="mc_title_textSize" format="dimension" />-->
+        <!--<attr name="mc_title_textColor" format="color"/>-->
+        <attr name="mc_title_sub_text" format="string" />
+        <attr name="mc_title_title_menu_resourceId" format="reference" />
+        <!--<attr name="mc_title_sub_textSize" format="dimension" />-->
+        <!--<attr name="mc_title_sub_textColor" format="color"/>-->
+        <attr name="mc_title_left_drawable" format="reference" />
+        <attr name="mc_title_more_drawable" format="reference" />
+
+        <!--以下属性对应menu资源xml的配置-->
+        <attr name="mc_title_action_menu_resourceId" format="reference" />
+        <attr name="mc_title_action_menu_item_icon_large" format="reference" />
+        <attr name="android:title"/>
+        <attr name="android:icon"/>
+        <attr name="android:id"/>
+
+        <!--以下属性对应popupmenu资源xml的宽-->
+        <attr name="mc_title_action_menu_width" format="dimension" />
+    </declare-styleable>
+</resources>

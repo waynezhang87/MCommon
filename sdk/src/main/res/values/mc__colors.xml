@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="loading_btn_disable">#bbbbbb</color>
+
+    <color name="loading_btn_normal">#ff9913</color>
+
+    <color name="loading_btn_pressed">#e58911</color>
+
+    <color name="xlv_hint_text_color">#989898</color>
+
+    <color name="dialog_background">#99000000</color>
+
+    <color name="dialog_dark">#d7d7d7</color>
+
+    <color name="emotion_panel_bg">#ffffff</color>
+
+    <color name="emotion_panel_divider">#dddddd</color>
+
+    <color name="emotion_panel_tab_txt_color_grey">#b2b2b2</color>
+
+    <color name="emotion_panel_tab_txt_color_blue">#348cd0</color>
+
+    <color name="emotion_panel_tab_bg_color_check">#ffffff</color>
+
+    <color name="emotion_panel_tab_txt_color_black">#000000</color>
+
+    <color name="emotion_tab_check_bg">#e3e3e3</color>
+
+    <!--color name="mc_title_bar_background">#EC1C24</color -->
+
+    <color name="mc_white">#ffffffff</color>
+
+    <color name="mc_grey">#b2b2b2</color>
+    <color name="mc_red">#ED1C24</color>
+    <color name="mc_divider">#e1e1e1</color>
+    <color name="mc_warning">#ffe9ad</color>
+
+    <color name="mc_page_viewer_bg">#515253</color>
+    <color name="mc_title_bar_background">#ffffff</color>
+    <color name="mc_tile_bg">#ffffff</color>
+    <color name="mc_tile_line_bg">#ccc</color>
+    <color name="mc_black_transparent_50">#7f000000</color>
+
+    <color name="mc_txt1_color_black">#353535</color>
+    <color name="mc_txt2_color_black">#353535</color>
+    <color name="mc_txt3_color_black32">#353535</color>
+    <color name="mc_txt4_color_grey22">#b2b2b2</color>
+    <color name="mc_txt6_color_grey28">#b2b2b2</color>
+    <color name="mc_txt8_color_grey32">#b2b2b2</color>
+    <color name="mc_txt9_color_white22">#ffffff</color>
+    <color name="mc_txt10_color_white28">#ffffff</color>
+    <color name="mc_txt11_color_white">#ffffff</color>
+    <color name="mc_txt12_grey30_2">#888888</color>
+    <color name="mc_txt12_black30_2">#353535</color>
+    <color name="mc_txt13_white34">#ffffff</color>
+    <color name="mc_txt14_white24">#ffffff</color>
+
+    <color name="mc_option_bg_50">#7F000000</color>
+    <color name="mc_option_bg_line">#dddddd</color>
+    <color name="mc_divider_line">#dddddd</color>
+    <color name="mc_option_item_bg">#f5f5f5</color>
+    <color name="mc_image_viewer_bg">#515253</color>
+    <color name="mc_black">#000000</color>
+    <color name="mc_list_item_pressed">#E0E0E0</color>
+    <color name="mc_font_grey_dark">#999999</color>
+    <color name="mc_title_bar_ext_right_text_color">#FF6008</color>
+</resources>

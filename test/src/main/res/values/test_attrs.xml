@@ -1,0 +1,28 @@
+<resources>
+    <declare-styleable name="mhh_common">
+        <attr name="android:title" />
+        <attr name="android:hint" />
+        <attr name="android:layout"/>
+        <attr name="leftButtonImage" format="reference" />
+        <attr name="rightButtonImage" format="reference" />
+        <attr name="rightButtonText" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="mhh_selectbtn">
+        <attr name="android:title" />
+        <attr name="android:value" />
+    </declare-styleable>
+
+    <declare-styleable name="common_big_pic">
+        <attr name="android:layout"/>
+    </declare-styleable>
+
+    <declare-styleable name="mhh_ratingbar">
+        <attr name="isSmall" format="boolean"/>
+        <attr name="isShowValue" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="mhh_timelimit">
+        <attr name="setValue" format="string"/>
+    </declare-styleable>
+</resources>

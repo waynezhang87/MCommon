@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.waynezhang.mcommon">
+
+    <uses-sdk android:minSdkVersion="9" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application>
+        <activity android:name="com.waynezhang.mcommon.support.image.ShowAllPicturesActivity"
+            android:launchMode="singleTask"/>
+
+        <activity android:name="com.waynezhang.mcommon.support.image.ShowImageActivity" />
+        <activity android:name="com.waynezhang.mcommon.template.activity.BridgeActivity"/>
+        <activity
+            android:name="com.waynezhang.mcommon.activity.GenericFragmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <service android:name="com.waynezhang.mcommon.notification.download.DownloadService"/>
+    </application>
+
+</manifest>

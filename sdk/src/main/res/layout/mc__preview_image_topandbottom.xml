@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <com.waynezhang.mcommon.xwidget.McTitleBar
+        android:id="@+id/mc_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/mc_anim_preview_top"
+        android:layout_alignParentTop="true"
+        app:mcLayoutResourceId="R.layout.mc_title_bar"
+        app:mcLeftButtonImage="@drawable/mc_icon_top_back"
+        app:mcTitleText="图片"
+        tools:mcRightViewBackground="@drawable/mc_solid_red_coner_white"/>
+
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        style="@style/mc_anim_preview_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="#cceef1f0"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/ckbSelect"
+            style="@style/CustomCheckboxTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            android:paddingLeft="26dp"
+            android:layout_marginRight="15dp"
+            android:text="选择"
+            android:textColor="#b2b2b2"/>
+    </LinearLayout>
+
+</RelativeLayout>

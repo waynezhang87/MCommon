@@ -1,0 +1,18 @@
+<resources>
+    <string name="mc_i_see">知道了</string>
+    <string name="mc_ok">确定</string>
+    <string name="mc_cancel">取消</string>
+    
+    <string name="xlistview_header_hint_normal">下拉刷新</string>
+    <string name="xlistview_header_hint_ready">松开刷新数据</string>
+    <string name="xlistview_header_hint_loading">正在加载...</string>
+    <string name="xlistview_header_last_time">上次更新时间：</string>
+    <string name="xlistview_footer_hint_normal">更多</string>
+    <string name="xlistview_footer_hint_nomore">没有更多结果了</string>
+    <string name="xlistview_footer_hint_ready">松开载入更多</string>
+
+    <string name="picture_time_txt_week">本周</string>
+    <string name="picture_time_txt_month">这个月</string>
+
+    <string name="mc_menu_save">保存到手机</string>
+</resources>

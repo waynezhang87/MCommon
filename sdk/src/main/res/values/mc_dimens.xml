@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="emotion_panel_tab_txt">16dip</dimen>
+
+    <dimen name="mc_txt1TextSize">12dip</dimen>
+    <dimen name="mc_txt2TextSize">16dip</dimen>
+    <dimen name="mc_txt3TextSize">16dip</dimen>
+    <dimen name="mc_txt4TextSize">11dip</dimen>
+    <dimen name="mc_txt6TextSize">14dip</dimen>
+    <dimen name="mc_txt8TextSize">16dip</dimen>
+    <dimen name="mc_txt10TextSize">14dip</dimen>
+    <dimen name="mc_txt9TextSize">11dip</dimen>
+    <dimen name="mc_txt11TextSize">16dip</dimen>
+    <dimen name="mc_txt12TextSize">16dip</dimen>
+    <dimen name="mc_txt13TextSize">17dip</dimen>
+    <dimen name="mc_txt14TextSize">12dip</dimen>
+    <dimen name="mc_txt17TextSize">85dip</dimen>
+    <dimen name="mc_txt18TextSize">13dp</dimen>
+</resources>

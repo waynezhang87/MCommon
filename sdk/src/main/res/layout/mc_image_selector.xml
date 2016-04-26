@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <com.waynezhang.mcommon.xwidget.McTitleBar
+        android:id="@+id/mc_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        app:mcLayoutResourceId="R.layout.mc_title_bar"
+        app:mcLeftButtonImage="@drawable/mc_icon_top_back"
+        app:mcTitleText="图片"
+        tools:mcRightViewBackground="@drawable/mc_solid_red_coner_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/mc_titleBar">
+
+        <com.waynezhang.mcommon.xwidget.LoadingLayout
+            android:id="@+id/viewLoading"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <GridView
+                android:id="@+id/mc_gridView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cacheColorHint="@android:color/transparent"
+                android:clipChildren="true"
+                android:gravity="center"
+                android:horizontalSpacing="3dip"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="3"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="3dip" />
+
+        </com.waynezhang.mcommon.xwidget.LoadingLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/mc_bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:alpha="0.95"
+        android:background="#f2f2f2"
+        android:clickable="true">
+
+        <TextView
+            android:id="@+id/mc_choose_dir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:drawablePadding="4dp"
+            android:drawableRight="@drawable/mc_icon_allpic"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:text="所有图片"
+            android:textColor="#b2b2b2" />
+
+        <TextView
+            android:id="@+id/mc_choose_preview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dip"
+            android:layout_alignParentRight="true"
+            android:text="预览(0)"
+            android:layout_marginRight="15dp"
+            android:textColor="#b2b2b2" />
+
+    </RelativeLayout>
+</RelativeLayout>

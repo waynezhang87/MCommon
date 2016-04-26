@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="emotion_container_array_default">
+        <item>mc_small_emotion_info</item>
+        <item>mc_big_emotion_info</item>
+    </string-array>
+
+    <string-array name="title_bar_right_view_array_default">
+        <item></item>
+    </string-array>
+</resources>
