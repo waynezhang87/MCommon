@@ -20,12 +20,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:text="操作系统" />
-        <TextView
-            android:id="@+id/profession_level"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="|"
-            android:textColor="#c7c7c7" />
 
         <com.waynezhang.mcommon.xwidget.LoadingLayout
             android:id="@+id/viewLoading"
