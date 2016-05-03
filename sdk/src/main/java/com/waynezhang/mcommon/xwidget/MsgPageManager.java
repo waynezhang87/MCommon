@@ -71,6 +71,7 @@ public class MsgPageManager<T> extends PageManager<T> {
                 }
             });
         }
+        loading = false;
         ptrList.onRefreshComplete();
     }
 }

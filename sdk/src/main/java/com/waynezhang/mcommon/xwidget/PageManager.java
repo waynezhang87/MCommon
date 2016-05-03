@@ -22,7 +22,7 @@ public class PageManager<T> {
     protected int mCurrentPageNo;
     protected boolean enableRefresh;
     protected PageLoadListener mPageLoadListener;
-    private boolean loading;
+    protected boolean loading;
 
     public PageManager(PullToRefreshListView ptrList, ArrayAdapterCompat<T> adapter, int startPage, final int numPageItem) {
         //numPageItem为服务端返回的一页里面item个数
