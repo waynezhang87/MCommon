@@ -1,8 +1,6 @@
 package com.waynezhang.mcommon.xwidget.titlebar;
 
-import android.annotation.TargetApi;
 import android.content.Context;
-import android.os.Build;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
@@ -19,7 +17,7 @@ public class McTitleBarExtMenuItemView extends RelativeLayout implements Bindabl
     private TextView notifyView;
     private int id;
 
-    private RelativeLayout layout;
+//    private ViewGroup layout;
 
     private boolean disable = false;    //当item为单纯的文字时, 不允许显示红点
 
@@ -35,48 +33,64 @@ public class McTitleBarExtMenuItemView extends RelativeLayout implements Bindabl
 
     private void init(Context context, AttributeSet attrs) {
         ((LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.mc_title_bar_ext_menu_item, this);
-        layout = (RelativeLayout) findViewById(R.id.layout);
+//        layout = (ViewGroup) findViewById(R.id.layout);
         view = (TextView) findViewById(R.id.textView);
         notifyView = (TextView) findViewById(R.id.notify_unread);
     }
 
-    @Override
-    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = measureWidth(widthMeasureSpec);
-        int newWidthMeasureSpec = MeasureSpec.makeMeasureSpec(width, widthMeasureSpec);
+//    @Override
+//    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+//        int width = measureWidth(widthMeasureSpec);
+//        int height = MeasureSpec.getSize(heightMeasureSpec);
+//        int newWidthMeasureSpec = makeMeasureSpec(width, widthMeasureSpec);
+//        setMeasuredDimension(width, height);
+//        setLayoutParams(new LinearLayout.LayoutParams(width, height));
+//        super.onMeasure(newWidthMeasureSpec, heightMeasureSpec);
+//    }
 
-        super.onMeasure(newWidthMeasureSpec, heightMeasureSpec);
-    }
+//    public int makeMeasureSpec(int size, int mode) {
+//        final int targetSdkVersion = getContext().getApplicationInfo().targetSdkVersion;
+//        if (targetSdkVersion <= JELLY_BEAN_MR1) {
+//            return size + mode;
+//        } else {
+//            return (size & ~MODE_MASK) | (mode & MODE_MASK);
+//        }
+//    }
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
-    private int measureWidth(int widthMeasureSpec) {
-        int result = 0;
-        int specMode = MeasureSpec.getMode(widthMeasureSpec);
-        int specSize = MeasureSpec.getSize(widthMeasureSpec);
+//    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+//    private int measureWidth(int widthMeasureSpec) {
+//        int result = 0;
+//        int specMode = MeasureSpec.getMode(widthMeasureSpec);
+//        int specSize = MeasureSpec.getSize(widthMeasureSpec);
+//
+//        switch (specMode) {
+//            case MeasureSpec.EXACTLY:
+//                result = specSize;
+//                break;
+//            case MeasureSpec.AT_MOST:
+//                view.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+//                LayoutParams params = (LayoutParams) view.getLayoutParams();
+//                final int targetSdkVersion = android.os.Build.VERSION.SDK_INT;
+//                if (targetSdkVersion <= JELLY_BEAN_MR1) {
+//                    result = view.getMeasuredWidth() + params.leftMargin + params.rightMargin + 60;
+//                } else {
+//                    result = view.getMeasuredWidth() + params.leftMargin + params.rightMargin;
+//                }
+//                result = Math.min(result, specSize);
+//                result = Math.max(result, layout.getMinimumWidth());
+//                break;
+//            case MeasureSpec.UNSPECIFIED:
+//                view.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
+//                result = view.getMeasuredWidth();
+//                break;
+//        }
+//        return result;
+//    }
 
-        switch (specMode) {
-            case MeasureSpec.EXACTLY:
-                result = specSize;
-                break;
-            case MeasureSpec.AT_MOST:
-                view.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
-                LayoutParams params = (LayoutParams) view.getLayoutParams();
-                result = view.getMeasuredWidth() + params.leftMargin + params.rightMargin;
-                result = Math.min(result, specSize);
-                result = Math.max(result, layout.getMinimumWidth());
-                break;
-            case MeasureSpec.UNSPECIFIED:
-                view.measure(MeasureSpec.UNSPECIFIED, MeasureSpec.UNSPECIFIED);
-                result = view.getMeasuredWidth();
-                break;
-        }
-        return result;
-    }
-
-    @Override
-    protected void onLayout(boolean changed, int l, int t, int r, int b) {
-        super.onLayout(changed, l, t, r, b);
-    }
+//    @Override
+//    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+//        super.onLayout(changed, l, t, r, b);
+//    }
 
     @Override
     public void bind(McTitleBarExtMenuItem item) {
@@ -91,13 +105,13 @@ public class McTitleBarExtMenuItemView extends RelativeLayout implements Bindabl
     }
 
     public void notifyWithoutCount(boolean enable) {
-        notifyView.setVisibility(enable && !disable ? VISIBLE : GONE);
+        notifyView.setVisibility(enable && !disable ? VISIBLE : INVISIBLE);
     }
 
     public void notifyWithCount(int count) {
         if (disable) return;
         if (count <= 0) {
-            notifyView.setVisibility(GONE);
+            notifyView.setVisibility(INVISIBLE);
         } else if (count < 100) {
             notifyView.setVisibility(VISIBLE);
             notifyView.setText(String.valueOf(count));

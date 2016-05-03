@@ -132,6 +132,11 @@ public class ShowImageActivity extends FragmentActivity implements ViewPager.OnP
                     public void onClick(View v) {
                         Log.d(TAG, "onClick");
 
+                        if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
+                            Toast.makeText(ShowImageActivity.this, "无外部存储卡，无法保存!", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
                         // 这时的大图必须存在否者不应该到达次逻辑
 //                        if (mViewPager == null) return;
 //                        PhotoView photoView = (PhotoView) mViewPager.findViewById(R.id.photoView);

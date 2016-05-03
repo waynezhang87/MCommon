@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
     android:layout_width="wrap_content"
     android:minWidth="50dp"
-    android:layout_height="50dp">
+    android:layout_height="50dp"
+    android:paddingLeft="10dp">
 
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_gravity="center"
         android:lines="1"
         tools:background="@drawable/mc_icon60_top_more"
         android:textColor="@color/mc_title_bar_ext_right_text_color"
@@ -24,10 +23,11 @@
     <TextView
         android:id="@+id/notify_unread"
         android:layout_width="wrap_content"
-        android:layout_height="17dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="10dp"
+        android:minWidth="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="3dp"
         android:layout_marginTop="3dp"
+        android:layout_marginLeft="-14dp"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
         tools:text="99+"
@@ -35,6 +35,6 @@
         android:textColor="@color/mc_white"
         android:gravity="center"
         android:background="@drawable/mc_red_point"
-        android:visibility="gone" />
+        android:visibility="invisible" />
 
-</RelativeLayout>
+</LinearLayout>
