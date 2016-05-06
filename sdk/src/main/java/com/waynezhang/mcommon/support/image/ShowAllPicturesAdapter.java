@@ -212,8 +212,12 @@ public class ShowAllPicturesAdapter extends BaseAdapter {
         });
 
         ImageView imageView = (ImageView) convertView.findViewById(R.id.picture_view);
-        Picasso.with(_context).load(img.smallUrl).resize(img.smallWidth, img.smallHeight).centerCrop().into(imageView);
 
+        if (img.smallWidth <= 0 || img.smallHeight <= 0){
+            Picasso.with(_context).load(img.smallUrl).resize(200, 200).centerCrop().into(imageView);
+        }else {
+            Picasso.with(_context).load(img.smallUrl).resize(img.smallWidth, img.smallHeight).centerCrop().into(imageView);
+        }
         convertView.setTag(position);
         return convertView;
     }

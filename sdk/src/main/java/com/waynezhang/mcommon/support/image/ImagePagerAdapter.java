@@ -132,7 +132,7 @@ public class ImagePagerAdapter extends PagerAdapter {
         } else if(!TextUtils.isEmpty(item.url)){
             requestCreator = picasso.load(item.url);
         }
-
+        Log.d("ImagePagerAdapter", "instantiateItem small=" + item.smallUrl + ", largeurl=" + item.url);
         if(requestCreator != null){
             requestCreator.placeholder(R.drawable.mc__image_placeholder).memoryPolicy(MemoryPolicy.NO_CACHE, MemoryPolicy.NO_STORE)
                     .into(_photoView, new Callback() {
