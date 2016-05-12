@@ -1,18 +1,18 @@
 /**
  * The MIT License (MIT)
- * 
+ * <p/>
  * Copyright (c) 2014 jc0mm0n
- * 
+ * <p/>
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
  * in the Software without restriction, including without limitation the rights
  * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
  * copies of the Software, and to permit persons to whom the Software is
  * furnished to do so, subject to the following conditions:
- * 
+ * <p/>
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ * <p/>
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -24,7 +24,12 @@
 package com.waynezhang.mcommon.support;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.v4.app.Fragment;
+import android.view.ContextThemeWrapper;
+
+import com.waynezhang.mcommon.util.ContextUtil;
+
 
 /**
  * Created by jc0mm0n on 10/26/14.
@@ -42,41 +47,43 @@ public class Safeguard {
      * @param objects 可以是Activity, Fragment, View元素
      * @return true表示不需要再执行回调动作, false表示可以接着执行回调动作
      */
-    public static boolean ignorable(Object... objects){
-        if(objects==null)
+    public static boolean ignorable(Object... objects) {
+        if (objects == null)
             return true;
 
-        for(Object obj : objects){
-            if(obj instanceof Activity && !isValid((Activity)obj)){
+        for (Object obj : objects) {
+            if (obj instanceof Activity && !isValid((Activity) obj)) {
                 return true;
-            } else if (obj instanceof Fragment && !isValid((Fragment)obj)){
+            } else if (obj instanceof Fragment && !isValid((Fragment) obj)) {
                 return true;
-            } else if(!isValid(obj)){
+            } else if (obj instanceof ContextThemeWrapper && !isValid(ContextUtil.scanForActivity((Context) obj))) {
+                return true;
+            } else if (!isValid(obj)) {
                 return true;
             }
         }
         return false;
     }
 
-    private static boolean isValid(Activity activity){
-        if(activity==null)
+    private static boolean isValid(Activity activity) {
+        if (activity == null)
             return false;
 
         return !activity.isFinishing();
     }
 
-    private static boolean isValid(Fragment fragment){
-        if(fragment == null)
+    private static boolean isValid(Fragment fragment) {
+        if (fragment == null)
             return false;
 
-        if(fragment.isDetached()){
+        if (fragment.isDetached()) {
             return true;
         }
 
         return isValid(fragment.getActivity());
     }
 
-    private static boolean isValid(Object obj){
+    private static boolean isValid(Object obj) {
         return obj != null;
     }
 }
