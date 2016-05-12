@@ -21,7 +21,7 @@ public class CacheUtil {
 	public static final Charset UTF_8 = Charset.forName("UTF-8");
 	private static final int MIN_DISK_CACHE_SIZE = 5 * 1024 * 1024; // 5MB
 	private static final int MAX_DISK_CACHE_SIZE = 50 * 1024 * 1024; // 50MB
-	private static final String TEMP_CACHE = "/temp-cache";
+	private static final String SNDA_CACHE = "/snda-cache";
 	public static final int IO_BUFFER_SIZE = 8 * 1024;
 	public static final char KEY_SEPARATOR = '\n';
 
@@ -88,7 +88,7 @@ public class CacheUtil {
 				Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState()) ||
 						!isExternalStorageRemovable() ?
 						getExternalCacheDir(context).getPath() :
-						context.getCacheDir().getPath();
+						getInternalCacheDir(context).getPath();
 		return new File(cachePath + (uniqueName == null ? "" : (File.separator + uniqueName)));
 	}
 
@@ -98,12 +98,25 @@ public class CacheUtil {
 		}
 
 		// Before Froyo we need to construct the external cache dir ourselves
-		final String cacheDir = "/Android/data/" + context.getPackageName() + TEMP_CACHE;
+		final String cacheDir = "/Android/data/" + context.getPackageName() + SNDA_CACHE;
 		return new File(Environment.getExternalStorageDirectory().getPath() + cacheDir);
 	}
 
 	public static boolean hasExternalCacheDir(Context context) {
 		return Build.VERSION.SDK_INT >= Build.VERSION_CODES.FROYO && context.getExternalCacheDir() != null;
+	}
+
+	public static File getInternalCacheDir(Context context) {
+		if (hasExternalCacheDir(context)) {
+			return context.getCacheDir();
+		}
+
+		final String cacheDir = "/data/data/" + context.getPackageName() + SNDA_CACHE;
+		return new File(cacheDir);
+	}
+
+	public static boolean hasInternalCacheDir(Context context) {
+		return context.getCacheDir() != null;
 	}
 
 	public static long calculateDiskCacheSize(File dir) {

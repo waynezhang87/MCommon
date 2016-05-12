@@ -30,9 +30,6 @@ import android.os.Looper;
 
 import com.google.gson.JsonSyntaxException;
 //import com.shandagames.greport.GReport;
-import com.waynezhang.mcommon.util.BitmapUtil;
-import com.waynezhang.mcommon.util.L;
-import com.waynezhang.mcommon.util.ThreadUtil;
 import com.squareup.okhttp.Callback;
 import com.squareup.okhttp.Headers;
 import com.squareup.okhttp.MediaType;
@@ -42,6 +39,9 @@ import com.squareup.okhttp.Request;
 import com.squareup.okhttp.RequestBody;
 import com.squareup.okhttp.Response;
 import com.squareup.okhttp.internal.InternalCache;
+import com.waynezhang.mcommon.util.BitmapUtil;
+import com.waynezhang.mcommon.util.L;
+import com.waynezhang.mcommon.util.ThreadUtil;
 
 import org.apache.http.conn.ConnectTimeoutException;
 
@@ -54,6 +54,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -110,7 +111,8 @@ public class Http {
 
     public static String get(final String url, final StringCallback callback) {
         //cancel tag with same url
-        cancel(url);
+//        cancel(url);  // Deleted by waynezhang on 5/9/16: 删除取消相同url的request的代码, 转由业务层控制
+        UUID tag = UUID.randomUUID();
         L.d(TAG, "Do GET --> " + url);
         final Request request = new Request.Builder().url(url).tag(url).build();
 
@@ -148,7 +150,7 @@ public class Http {
             });
         }
 
-        return url;
+        return tag.toString();
     }
 
     private static final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
