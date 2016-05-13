@@ -207,7 +207,9 @@ public class Http {
 
     // 上传图片使用
     public static String post(final String url, final Map<String, String> params, final Bitmap attachment, final StringCallback callback) {
-        return post(url, params, BitmapUtil.getJpegBytes(attachment), callback);
+        String tag = post(url, params, BitmapUtil.getJpegBytes(attachment), callback);
+        attachment.recycle();
+        return tag;
     }
 
     // 上传图片使用
