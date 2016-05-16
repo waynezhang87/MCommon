@@ -193,7 +193,14 @@ public class BitmapUtil {
             options.inScaled = true;
             options.inDensity = 240;
             options.inTargetDensity = (int) (240 * scale);
-            return BitmapFactory.decodeFile(srcPath, options);
+            try {
+                return BitmapFactory.decodeFile(srcPath, options);
+            } catch (OutOfMemoryError e) {
+                // 在一些低端手机中内存不足，或者三星之类的限制内存使用时，尝试使用inSampleSize做一次近似压缩
+                options.inScaled = false;
+                options.inSampleSize = Math.round(1 / scale);
+                return BitmapFactory.decodeFile(srcPath, options);
+            }
         } catch (OutOfMemoryError e) {
             L.e(TAG, "outofmemory");
             return null;
