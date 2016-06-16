@@ -13,7 +13,12 @@
         * POLICY_NORMAL = 3; //网络超时，则使用缓存
         * POLICY_FORCE_CACHE = 4; //有缓存则不访问网络，无缓存则访问网络
     * 使用方法:
-        * 建议在全局Application中启动时执行初始化方法Http.initCachePolicyHandler(Context context, HttpPolicyHandlerImp httpPolicyHandler, Init init)
+        * 建议在全局Application中启动时执行初始化方法
+        
+        ```java
+        Http.initCachePolicyHandler(Context context, HttpPolicyHandlerImp httpPolicyHandler, Init init);
+        ```
+        
         * 传入的对象HttpPolicyHandlerImp是配置对象, 用于配置Http请求的超时时间/缓存策略/使用的缓存, 使用HttpPolicyHandler中的builder类构建
         * 传入的对象Init用于Http请求获取的response的预解析, 用于决定哪些返回的response需要缓存, 以及获取对应的请求method
     * 示例代码:
@@ -45,6 +50,7 @@
             }
          });
         ```
+        
 2. Cache缓存模块
     * 使用方法:
         * 建议在全局Application中启动时执行初始化方法
@@ -54,6 +60,7 @@
         ```java
         Cache cache = Cache.getBuilder(getApplicationContext()).build();
         ```
+        
 3. 公共组件
     * 使用方法: 参见相关代码注释
 
