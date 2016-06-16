@@ -1,10 +1,14 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
+//apply plugin: 'maven'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+// This is the library version used when deploying the artifact
+version = "1.0.0"
 
 android {
     compileSdkVersion 21
     buildToolsVersion '21.1.1'
-
+//    resourcePrefix "mc__"
     defaultConfig {
         minSdkVersion 9
         targetSdkVersion 21
@@ -36,8 +40,6 @@ android {
 }
 
 dependencies {
-//    compile project(':GREPORT_SDK')
-//    compile 'com.shandagames.greport:sdk:1.0.4'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.5.0'
     compile 'com.google.code.gson:gson:2.3'
@@ -46,19 +48,69 @@ dependencies {
     compile 'org.apache.httpcomponents:httpmime:4.1'
 }
 
-//uploadArchives {
-//    repositories.mavenDeployer {
-//        name = 'mavenCentralReleaseDeployer'
-//        repository(url: "http://10.240.22.145:8082/nexus/content/repositories/releases") {
-//            authentication(userName: "liuyagang", password: "123456")
-//        }
-//        snapshotRepository(url: "http://10.240.22.145:8082/nexus/content/repositories/snapshots") {
-//            authentication(userName: "liuyagang", password: "123456")
-//        }
-//        pom.version = "1.0.25-SNAPSHOT"
-//        pom.artifactId = "library"
-//        pom.groupId = "com.shandagames.mcommon"
-//        pom.name = "mcommon library"
-//        pom.packaging = 'aar'
-//    }
-//}
+def siteUrl = 'https://github.com/waynezhang87/MCommon'      // 项目的主页
+def gitUrl = 'https://github.com/waynezhang87/MCommon.git'   // Git仓库的url
+group = "com.waynezhang.mcommon"                             // Maven Group ID for the artifact，一般填你唯一的包名
+install {
+    repositories.mavenInstaller {
+        // This generates POM.xml with proper parameters
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'Android Common Utils' 	//项目描述
+                url siteUrl
+                // Set your license
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'zhangwei.wayne'		//填写的一些基本信息
+                        name 'ZhangWei.Wayne'
+                        email 'wei.zhang211@gmail.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+                }
+            }
+        }
+    }
+}
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "MCommon"	//发布到JCenter上的项目名字
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
