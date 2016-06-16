@@ -1,10 +1,10 @@
 # MCommon
 常用工具仓库
 
-# Updates
+## Updates
 * 06/16/2016 -- 1.0.0版本发布JCenter.
 
-# Features
+## Features
 1. Http缓存策略
     * 目前支持的缓存策略定义在HttpPolicies类中, 包含:
         * POLICY_FORCE_NETWORK = 0;   //强制使用网络，跳过缓存
@@ -56,3 +56,13 @@
         ```
 3. 公共组件
     * 使用方法: 参见相关代码注释
+
+## Getting started
+
+在项目相关Gradle脚本 `build.gradle` 中添加:
+
+```gradle
+ dependencies {
+   compile 'com.waynezhang.mcommon:sdk:1.0.0'
+ }
+```
